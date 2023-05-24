@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:id="@+id/flContentLoading"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivNotFound"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/img_state_no_data"
+            android:layout_gravity="center_horizontal|top" />
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/progressBar"
+            android:layout_width="@dimen/margin_big"
+            android:layout_height="@dimen/margin_big"
+            app:indicatorName="BallClipRotatePulseIndicator"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            app:indicatorColor="@color/colorAccent"/>
+
+    </FrameLayout>
+
+    <TextView
+        android:layout_below="@id/flContentLoading"
+        android:id="@+id/tvReload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="@style/TextAppearance.CircularStd.Bold"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:textSize="@dimen/title_medium_size"
+        android:text="@string/subtitle_product_pilihan"
+        android:layout_marginRight="@dimen/margin_big"
+        android:layout_marginLeft="@dimen/margin_big"
+        android:textColor="@color/black"
+      />
+
+    <TextView
+        android:layout_below="@id/tvReload"
+        android:id="@+id/tvSubReload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="@style/TextAppearance.CircularStd.Book"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:text="@string/label_tabs_deskripsi"
+        android:textSize="@dimen/text_medium_size"
+        android:layout_marginRight="@dimen/margin_big"
+        android:layout_marginLeft="@dimen/margin_big"
+        android:textColor="@color/label_black"
+        />
+
+    <Button
+        android:id="@+id/buttonRetry"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:paddingTop="@dimen/margin_small"
+        android:paddingBottom="@dimen/margin_small"
+        android:paddingLeft="@dimen/margin_medium"
+        android:textColor="@color/text_btn_fill"
+        android:paddingRight="@dimen/margin_medium"
+        android:layout_width="@dimen/button_min_width"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvReload"
+        android:layout_centerHorizontal="true"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,204 @@
+<layout>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/llSubTotalBottom" />
+
+        <LinearLayout
+            android:id="@+id/llSubTotalBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/bg_home"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_divider"
+                android:background="@color/divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:lineSpacingExtra="@dimen/title_line_spacing_medium_size"
+                    android:paddingStart="@dimen/margin_medium"
+                    android:paddingTop="@dimen/margin_extra_small"
+                    android:paddingEnd="@dimen/margin_medium"
+                    android:paddingBottom="@dimen/margin_extra_small"
+                    android:text="@string/label_biaya_sewa"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/TextAppearance.CircularStd.Book"
+                    android:textColor="@color/label_black"
+                    android:textSize="@dimen/text_small_size" />
+
+                <TextView
+                    android:id="@+id/tvBiayaSewa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="end"
+                    android:lineSpacingExtra="@dimen/title_line_spacing_medium_size"
+                    android:paddingStart="@dimen/margin_medium"
+                    android:paddingTop="@dimen/margin_extra_small"
+                    android:paddingEnd="@dimen/margin_medium"
+                    android:paddingBottom="@dimen/margin_extra_small"
+                    android:text="@string/label_hint_kecamatan"
+                    android:textAppearance="@style/TextAppearance.CircularStd.Book"
+                    android:textColor="@color/label_black"
+                    android:textSize="@dimen/text_medium_size" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:lineSpacingExtra="@dimen/title_line_spacing_medium_size"
+                    android:paddingStart="@dimen/margin_medium"
+                    android:paddingTop="@dimen/margin_extra_small"
+                    android:paddingEnd="@dimen/margin_medium"
+                    android:paddingBottom="@dimen/margin_extra_small"
+                    android:text="@string/label_biaya_pengiriman"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/TextAppearance.CircularStd.Book"
+                    android:textColor="@color/label_black"
+                    android:textSize="@dimen/text_small_size" />
+
+                <TextView
+                    android:id="@+id/tvBiayaPengiriman"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="end"
+                    android:lineSpacingExtra="@dimen/title_line_spacing_medium_size"
+                    android:paddingStart="@dimen/margin_medium"
+                    android:paddingTop="@dimen/margin_extra_small"
+                    android:paddingEnd="@dimen/margin_medium"
+                    android:paddingBottom="@dimen/margin_extra_small"
+                    android:text="@string/label_hint_kecamatan"
+                    android:textAppearance="@style/TextAppearance.CircularStd.Book"
+                    android:textColor="@color/label_black"
+                    android:textSize="@dimen/text_medium_size" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:lineSpacingExtra="@dimen/title_line_spacing_medium_size"
+                    android:paddingStart="@dimen/margin_medium"
+                    android:paddingTop="@dimen/margin_extra_small"
+                    android:paddingEnd="@dimen/margin_medium"
+                    android:paddingBottom="@dimen/margin_extra_small"
+                    android:text="@string/label_diskon_promo"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/TextAppearance.CircularStd.Book"
+                    android:textColor="@color/label_black"
+                    android:textSize="@dimen/text_small_size" />
+
+                <TextView
+                    android:id="@+id/tvDiskon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="end"
+                    android:lineSpacingExtra="@dimen/title_line_spacing_medium_size"
+                    android:paddingStart="@dimen/margin_medium"
+                    android:paddingTop="@dimen/margin_extra_small"
+                    android:paddingEnd="@dimen/margin_medium"
+                    android:paddingBottom="@dimen/margin_extra_small"
+                    android:text="@string/label_hint_kecamatan"
+                    android:textAppearance="@style/TextAppearance.CircularStd.Book"
+                    android:textColor="@color/orange_dark"
+                    android:textSize="@dimen/text_medium_size" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_divider"
+                android:background="@color/divider" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/margin_small"
+                android:lineSpacingExtra="@dimen/title_line_spacing_medium_size"
+                android:paddingStart="@dimen/margin_medium"
+                android:paddingTop="@dimen/margin_extra_small"
+                android:paddingEnd="@dimen/margin_medium"
+                android:paddingBottom="@dimen/margin_extra_small"
+                android:text="@string/label_grand_total"
+                android:textAllCaps="true"
+                android:textAppearance="@style/TextAppearance.CircularStd.Book"
+                android:textColor="@color/hint"
+                android:textSize="@dimen/text_medium_size" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="@dimen/margin_extra_small"
+                    android:layout_weight="1"
+                    android:lineSpacingExtra="@dimen/title_line_spacing_medium_size"
+                    android:paddingStart="@dimen/margin_medium"
+                    android:paddingEnd="@dimen/margin_medium"
+                    android:text="@string/label_sewa_biaya_pengiriman"
+                    android:textAppearance="@style/TextAppearance.CircularStd.Medium"
+                    android:textColor="@color/label_black"
+                    android:textSize="@dimen/title_medium_size" />
+
+                <TextView
+                    android:id="@+id/tvGrandTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginBottom="@dimen/margin_extra_small"
+                    android:gravity="end"
+                    android:lineSpacingExtra="@dimen/title_line_spacing_medium_size"
+                    android:paddingStart="@dimen/margin_medium"
+                    android:paddingEnd="@dimen/margin_medium"
+                    android:text="@string/label_hint_kecamatan"
+                    android:textAppearance="@style/TextAppearance.CircularStd.Medium"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/text_medium_size" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

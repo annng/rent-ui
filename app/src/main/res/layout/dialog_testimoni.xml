@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_medium"
+        android:background="@color/view_bg"
+        android:maxWidth="350dp"
+        android:minWidth="300dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_medium">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingLeft="@dimen/margin_small"
+                android:paddingRight="@dimen/margin_small"
+                android:gravity="center"
+                android:paddingTop="@dimen/margin_small"
+                android:text="@string/label_dialog_testimoni"
+                android:textAppearance="@style/TextAppearance.CircularStd.Medium"
+                android:textColor="@color/text_regular"
+                android:textSize="@dimen/title_medium_size"
+                />
+
+            <androidx.appcompat.widget.AppCompatRatingBar
+                android:id="@+id/rbRating"
+                style="@style/Indicator"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleX="0.5"
+                android:scaleY="0.5"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginBottom="@dimen/margin_medium"
+                android:layout_gravity="center_horizontal"
+                android:numStars="5"
+                android:stepSize="1.0"
+                />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/etDescription"
+                    style="@style/TextInputLayoutOutline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:minLines="4"
+                    android:maxLines="4"
+                    android:paddingLeft="@dimen/margin_hint"
+                    android:paddingTop="@dimen/margin_small" />
+
+                <TextView
+                    android:id="@+id/tvHintDescription"
+                    style="@style/TextViewHintOutline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/label_tabs_deskripsi" />
+
+            </FrameLayout>
+
+            <Button
+                android:id="@+id/btnSend"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_btn_send"
+                android:background="@color/orange"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:layout_margin="@dimen/margin_medium"
+                android:text="@string/action_send"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

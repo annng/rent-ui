@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <dimen name="padding_extra_small">2dp</dimen>
+
+    <dimen name="margin_extra_small">4dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_hint">12dp</dimen>
+    <dimen name="margin_label_spinner">24dp</dimen>
+    <dimen name="margin_big">32dp</dimen>
+    <dimen name="margin_right_kode_promo">120dp</dimen>
+    <dimen name="margin_btn_top">-26dp</dimen>
+
+
+    <dimen name="edittext_qty_height">30dp</dimen>
+    <dimen name="button_next_height">38dp</dimen>
+    <dimen name="button_min_width">200dp</dimen>
+    <dimen name="button_min_height">60dp</dimen>
+    <dimen name="button_height_edit">24dp</dimen>
+    <dimen name="btn_sewa_height">33dp</dimen>
+
+    <dimen name="height_space_menu">12dp</dimen>
+
+    <dimen name="text_big_size">16sp</dimen>
+    <dimen name="text_medium_size">14sp</dimen>
+    <dimen name="text_small_size">12sp</dimen>
+    <dimen name="text_extra_small_size">10sp</dimen>
+
+    <dimen name="title_medium_size">18sp</dimen>
+    <dimen name="title_big_size">22sp</dimen>
+    <dimen name="title_line_spacing_medium_size">4dp</dimen>
+
+    <dimen name="icon_small_size">12dp</dimen>
+    <dimen name="icon_medium_size">24dp</dimen>
+    <dimen name="icon_large_size">32dp</dimen>
+
+    <dimen name="thumbnail_icon_drawer">100dp</dimen>
+    <dimen name="thumbnail_photo_profile_small">75dp</dimen>
+    <dimen name="thumbnail_icon_small">50dp</dimen>
+    <dimen name="thumbnail_product_heigt">75dp</dimen>
+    <dimen name="thumbnail_product_troli">36dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+    <dimen name="btn_round_height_small">48dp</dimen>
+    <dimen name="height_divider">0.8dp</dimen>
+    <dimen name="height_btn_send">36dp</dimen>
+    <dimen name="width_btn_send">52dp</dimen>
+    <dimen name="height_spinner_round">16dp</dimen>
+
+    <dimen name="min_width_card_product">160dp</dimen>
+
+
+    //transition
+
+</resources>

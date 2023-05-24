@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<data>
+    <variable
+        name="context"
+        type="com.rent.app.ui.auth.login.LoginActivity" />
+</data>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/llBtnBottom">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/margin_small">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:src="@drawable/img_login_screen" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/logo_sewa_white" />
+
+
+                </FrameLayout>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="@dimen/margin_medium"
+                    android:lineSpacingExtra="@dimen/title_line_spacing_medium_size"
+                    android:text="@string/label_login"
+                    android:textAppearance="@style/TextAppearance.CircularStd.Medium"
+                    android:textColor="@color/label_black"
+                    android:textSize="@dimen/title_medium_size" />
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_small">
+
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etEmail"
+                        style="@style/TextInputLayoutEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress" />
+
+                    <TextView
+                        android:id="@+id/tvHintEmail"
+                        style="@style/TextViewHintOutline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_hint_email" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_small">
+
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etPassword"
+                        style="@style/TextInputLayoutPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tvHintPasssword"
+                        style="@style/TextViewHintOutline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_hint_password" />
+
+                </FrameLayout>
+
+                <Button
+                    android:id="@+id/btnForgot"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_medium"
+                    android:background="@android:color/transparent"
+                    android:text="@string/label_btn_lupa_sandi"
+                    android:textAllCaps="false"
+                    android:textColor="@color/blue" />
+
+                <Button
+                    android:id="@+id/btnLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_medium"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginEnd="@dimen/margin_medium"
+                    android:layout_marginBottom="@dimen/margin_medium"
+                    android:background="@color/green"
+                    android:onClick="@{() -> context.gotoHome()}"
+                    android:text="@string/action_login"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/llBtnBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/container_bg"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_divider"
+                android:background="@color/divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:lineSpacingExtra="@dimen/title_line_spacing_medium_size"
+                    android:text="@string/label_belum_punya_akun"
+                    android:textAppearance="@style/TextAppearance.CircularStd.Medium"
+                    android:textColor="@color/label_black"
+                    android:textSize="@dimen/text_medium_size" />
+
+                <Button
+                    android:id="@+id/btnRegister"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_extra_small"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:onClick="@{() -> context.gotoRegister()}"
+                    android:background="@android:color/transparent"
+                    android:lineSpacingExtra="@dimen/title_line_spacing_medium_size"
+                    android:text="@string/label_daftar_disini"
+                    android:textAppearance="@style/TextAppearance.CircularStd.Medium"
+                    android:textColor="@color/orange"
+                    android:textSize="@dimen/text_medium_size" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</layout>

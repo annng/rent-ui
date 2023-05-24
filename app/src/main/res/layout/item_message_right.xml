@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="sender"
+            type="java.lang.String" />
+
+        <variable
+            name="createAt"
+            type="java.lang.String" />
+
+        <variable
+            name="message"
+            type="java.lang.String" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_margin="@dimen/margin_small"
+            android:background="@drawable/bubble_orange"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tvPengirim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_extra_small"
+                android:layout_marginRight="@dimen/margin_small"
+                android:lineSpacingExtra="@dimen/title_line_spacing_medium_size"
+                android:text="@{sender}"
+                android:textAppearance="@style/TextAppearance.CircularStd.Medium"
+                android:textColor="@color/white_overlay"
+                android:textSize="@dimen/text_small_size" />
+
+            <TextView
+                android:id="@+id/tvMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_extra_small"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:lineSpacingExtra="@dimen/title_line_spacing_medium_size"
+                android:text="@{message}"
+                android:textAppearance="@style/TextAppearance.CircularStd.Book"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_medium_size" />
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_extra_small"
+                android:layout_marginRight="@dimen/margin_small"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:lineSpacingExtra="@dimen/title_line_spacing_medium_size"
+                android:text="@{createAt}"
+                android:textAppearance="@style/TextAppearance.CircularStd.Book"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_small_size" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

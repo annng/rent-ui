@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="context"
+            type="com.rent.app.ui.account.edit.profile.EditProfileActivity" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/llBtnBottom"
+            android:layout_below="@+id/toolbar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/margin_small">
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_medium"
+                        android:text="@string/label_info_edit_akun_1"
+                        android:textAppearance="@style/TextAppearance.CircularStd.Book"
+                        android:textColor="@color/label_black"
+                        android:textSize="@dimen/text_medium_size" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etNama"
+                            style="@style/TextInputLayoutOutline"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tvHintNama"
+                            style="@style/TextViewHintOutline"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_hint_nama" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etEmail"
+                            style="@style/TextInputLayoutOutline"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textEmailAddress" />
+
+                        <TextView
+                            android:id="@+id/tvHintEmail"
+                            style="@style/TextViewHintOutline"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_hint_email" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etNoPhone"
+                            style="@style/TextInputLayoutOutlinePhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <TextView
+                            android:id="@+id/tvHintNoPhone"
+                            style="@style/TextViewHintOutline"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_hint_no_ponsel" />
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/margin_small">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etAddress"
+                            style="@style/TextInputLayoutOutline"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="start"
+                            android:maxLines="4"
+                            android:minLines="4"
+                            android:paddingLeft="@dimen/margin_hint"
+                            android:paddingTop="@dimen/margin_small" />
+
+                        <TextView
+                            android:id="@+id/tvHintAddress"
+                            style="@style/TextViewHintOutline"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_hint_alamat" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:foreground="?selectableItemBackground"
+                        >
+
+
+                        <TextView
+                            android:id="@+id/tvJenisKelamin"
+                            style="@style/TextViewLayoutOutline"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:onClick="@{() -> context.dialogGender()}"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:longClickable="false" />
+
+                        <TextView
+                            android:id="@+id/tvHintJenisKelamin"
+                            style="@style/TextViewHintOutline"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_hint_jenis_kelamin" />
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:foreground="?selectableItemBackground">
+
+
+                        <TextView
+                            android:id="@+id/tvTanggalLahir"
+                            style="@style/TextViewLayoutOutline"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:longClickable="false" />
+
+                        <TextView
+                            android:id="@+id/tvHintTanggalLahir"
+                            style="@style/TextViewHintOutline"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/label_hint_tanggal_lahir" />
+
+                    </FrameLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/llBtnBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/container_bg"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_divider"
+                android:background="@color/divider" />
+
+            <Button
+                android:id="@+id/btnSave"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_medium"
+                android:background="@color/green"
+                android:text="@string/action_simpan_perubahan"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

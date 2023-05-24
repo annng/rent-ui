@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="context"
+            type="com.rent.app.ui.product.list.ProductListActivity" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include
+                    android:id="@+id/toolbar"
+                    layout="@layout/toolbar" />
+
+
+            </RelativeLayout>
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <include
+            android:id="@+id/mainLayout"
+            layout="@layout/activity_product" />
+
+        <View
+            android:id="@+id/vOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/black_overlay"
+            android:visibility="gone" />
+
+
+        <!-- Adding bottom sheet after main content -->
+
+        <include
+            android:id="@+id/sheetFilter"
+            layout="@layout/bottom_sheet_filter" />
+
+        <include
+            android:id="@+id/sheetSort"
+            layout="@layout/bottom_sheet_sortir" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

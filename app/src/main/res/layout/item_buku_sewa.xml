@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="order"
+            type="com.rent.app.data.order.Order" />
+
+        <variable
+            name="rentingDate"
+            type="java.lang.String" />
+
+        <variable
+            name="invoiceDate"
+            type="java.lang.String" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:background="@color/view_bg"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_medium">
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:background="@drawable/bg_btn_rounded"
+            android:backgroundTint="@color/green"
+            android:gravity="center"
+            android:lineSpacingExtra="@dimen/title_line_spacing_medium_size"
+            android:paddingLeft="@dimen/margin_small"
+            android:paddingTop="@dimen/margin_extra_small"
+            android:paddingRight="@dimen/margin_small"
+            android:paddingBottom="@dimen/margin_extra_small"
+            android:text="@{order.status}"
+            android:textAppearance="@style/TextAppearance.CircularStd.Medium"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_small_size" />
+
+        <TextView
+            android:id="@+id/tvNoInvoice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="@dimen/title_line_spacing_medium_size"
+            android:text="@{order.noOrder}"
+            android:textAppearance="@style/TextAppearance.CircularStd.Book"
+            android:textColor="@color/black_dark"
+            android:textSize="@dimen/title_medium_size" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_extra_small"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_extra_small"
+                    android:lineSpacingExtra="@dimen/title_line_spacing_medium_size"
+                    android:text="@string/label_tanggal_invoice"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/TextAppearance.CircularStd.Bold"
+                    android:textColor="@color/label"
+                    android:textSize="@dimen/text_small_size" />
+
+                <TextView
+                    android:id="@+id/tvTglInvoice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="@dimen/title_line_spacing_medium_size"
+                    android:text="@{invoiceDate}"
+                    android:textAppearance="@style/TextAppearance.CircularStd.Book"
+                    android:textColor="@color/black_dark"
+                    android:textSize="@dimen/text_medium_size" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvTitlePeminjaman"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_extra_small"
+                    android:lineSpacingExtra="@dimen/title_line_spacing_medium_size"
+                    android:text="@string/label_tanggal_peminjaman"
+                    android:textAllCaps="true"
+                    android:textAppearance="@style/TextAppearance.CircularStd.Bold"
+                    android:textColor="@color/label"
+                    android:textSize="@dimen/text_small_size" />
+
+                <TextView
+                    android:id="@+id/tvPeminjaman"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="@dimen/title_line_spacing_medium_size"
+                    android:text="@{order.rentDate}"
+                    android:textAppearance="@style/TextAppearance.CircularStd.Book"
+                    android:textColor="@color/black_dark"
+                    android:textSize="@dimen/text_medium_size" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#F2A25A</color>
+    <color name="colorAccent">#FF782D</color>
+
+    <color name="black_light">#898989</color>
+    <color name="black">#3C4C53</color>
+    <color name="black_dark">#212121</color>
+    <color name="black_overlay">#8a212121</color>
+    <color name="white_overlay">#7dffffff</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white_dark">#F9F9FB</color>
+    <color name="gray_bar">#f3f5f7</color>
+    <color name="gray_status">#D6DEE2</color>
+    <color name="gray_light">#E7E7E7</color>
+    <color name="gray">#ADBEC5</color>
+    <color name="gray_dark">#EBECED</color>
+    <color name="green">#4EBD65</color>
+    <color name="blue">#0FA6F8</color>
+    <color name="yellow_dark">#E8B243</color>
+    <color name="orange">#FF782D</color>
+    <color name="orange_dark">#F4774B</color>
+    <color name="red">#FA4054</color>
+
+    <!--Setup Color Name -->
+    <color name="btn_disable_colored">#4EBD65</color>
+
+    <color name="label">@color/gray</color>
+    <color name="label_black">@color/black</color>
+    <color name="label_thin">@color/black_light</color>
+    <color name="label_price">@color/green</color>
+    <color name="hint_label">@color/gray</color>
+    <color name="text">@color/white</color>
+    <color name="text_regular">@color/black</color>
+    <color name="text_btn_fill">@color/white</color>
+    <color name="hint">@color/gray</color>
+
+    <color name="divider">@color/gray_light</color>
+    <color name="view_bg">@color/white</color>
+    <color name="container_bg">@color/white_dark</color>
+    <color name="bg_home">@color/gray_bar</color>
+    <color name="btn_orange">@color/orange</color>
+    <color name="btn_blue">@color/blue</color>
+
+
+</resources>

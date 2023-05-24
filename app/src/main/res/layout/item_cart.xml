@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="cart"
+            type="com.rent.app.data.product.Cart" />
+        <import type="com.rent.app.util.ext.ExtDataKt"/>
+        <variable
+            name="periodeDate"
+            type="java.lang.String" />
+        <variable
+            name="subTotal"
+            type="java.lang.Long" />
+    </data>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/ivCheck"
+                android:layout_width="@dimen/icon_medium_size"
+                android:layout_height="@dimen/icon_medium_size"
+                android:layout_margin="@dimen/margin_medium"
+                android:foreground="?selectableItemBackground"
+                android:padding="@dimen/padding_extra_small"
+                android:src="@{cart.isSelected ? @drawable/ic_circle_checked : @drawable/ic_circle_outline}" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/margin_small"
+                android:orientation="vertical"
+                android:paddingRight="@dimen/margin_medium">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/ivPhotoProduct"
+                        android:layout_width="@dimen/thumbnail_product_troli"
+                        android:layout_height="@dimen/thumbnail_product_troli"
+                        app:loadUrl="@{cart.product.thumbnail}"/>
+
+                    <TextView
+                        android:id="@+id/tvProductName"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:layout_marginRight="@dimen/margin_small"
+                        android:layout_weight="1"
+                        android:lineSpacingExtra="@dimen/title_line_spacing_medium_size"
+                        android:maxLines="2"
+                        android:minLines="2"
+                        android:text="@{cart.product.productName}"
+                        android:textAppearance="@style/TextAppearance.CircularStd.Book"
+                        android:textColor="@color/label_black"
+                        android:textSize="@dimen/text_small_size" />
+
+                    <TextView
+                        android:id="@+id/tvPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:layout_marginRight="@dimen/margin_small"
+                        android:text="@{ExtDataKt.priceFormat(cart.product.price)}"
+                        android:lineSpacingExtra="@dimen/title_line_spacing_medium_size"
+                        android:textAppearance="@style/TextAppearance.CircularStd.Medium"
+                        android:textColor="@color/green"
+                        android:textSize="@dimen/text_small_size" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:layout_marginBottom="@dimen/margin_medium"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:layout_marginRight="@dimen/margin_small"
+                        android:layout_weight="0.7"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/margin_extra_small"
+                            android:lineSpacingExtra="@dimen/title_line_spacing_medium_size"
+                            android:text="@string/label_qty"
+                            android:textAllCaps="true"
+                            android:textAppearance="@style/TextAppearance.CircularStd.Book"
+                            android:textColor="@color/hint_label"
+                            android:textSize="@dimen/text_small_size" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/bg_rounded_qty"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/ivMinus"
+                                android:layout_width="@dimen/icon_large_size"
+                                android:layout_height="@dimen/icon_large_size"
+                                android:foreground="?selectableItemBackground"
+                                android:padding="@dimen/margin_small"
+                                android:src="@drawable/ic_remove" />
+
+                            <EditText
+                                android:id="@+id/etQty"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/edittext_qty_height"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginTop="@dimen/height_divider"
+                                android:layout_marginBottom="@dimen/height_divider"
+                                android:layout_weight="1"
+                                android:background="@color/white"
+                                android:gravity="center"
+                                android:inputType="number"
+                                android:text="@{ExtDataKt.asString(cart.qty)}"
+                                android:maxLength="2"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:textColor="@color/label_black"
+                                android:textSize="@dimen/text_medium_size" />
+
+                            <ImageView
+                                android:id="@+id/ivPlus"
+                                android:layout_width="@dimen/icon_large_size"
+                                android:layout_height="@dimen/icon_large_size"
+                                android:foreground="?selectableItemBackground"
+                                android:padding="@dimen/margin_small"
+                                android:src="@drawable/ic_add" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:layout_marginRight="@dimen/margin_small"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:lineSpacingExtra="@dimen/title_line_spacing_medium_size"
+                            android:text="@string/label_periode"
+                            android:textAllCaps="true"
+                            android:textAppearance="@style/TextAppearance.CircularStd.Book"
+                            android:textColor="@color/hint_label"
+                            android:textSize="@dimen/text_small_size" />
+
+                        <TextView
+                            android:id="@+id/tvPeriode"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/edittext_qty_height"
+                            android:layout_marginTop="@dimen/margin_extra_small"
+                            android:background="@drawable/bg_periode_outline"
+                            android:clickable="true"
+                            android:foreground="?selectableItemBackground"
+                            android:gravity="center"
+                            android:lineSpacingExtra="@dimen/title_line_spacing_medium_size"
+                            android:maxLines="1"
+                            android:paddingTop="@dimen/margin_extra_small"
+                            android:text="@{periodeDate}"
+                            android:textAllCaps="true"
+                            android:textAppearance="@style/TextAppearance.CircularStd.Book"
+                            android:textColor="@color/label_black"
+                            android:textSize="@dimen/text_small_size" />
+
+                    </LinearLayout>
+
+
+                    <ImageView
+                        android:id="@+id/ivDelete"
+                        android:layout_width="@dimen/icon_medium_size"
+                        android:layout_height="@dimen/icon_medium_size"
+                        android:layout_gravity="bottom"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:layout_marginBottom="@dimen/margin_extra_small"
+                        android:foreground="?selectableItemBackground"
+                        android:src="@drawable/ic_delete" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_divider"
+            android:background="@color/divider" />
+
+    </LinearLayout>
+</layout>

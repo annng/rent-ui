@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/view_bg"
+    android:orientation="horizontal">
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivToolbarIcon"
+            android:layout_width="@dimen/thumbnail_icon_small"
+            android:layout_height="@dimen/thumbnail_icon_small"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/margin_small"
+            android:padding="@dimen/margin_small"
+            android:src="@drawable/ic_sewa_sewa_24dp" />
+
+        <ImageView
+            android:id="@+id/ivToolbarBack"
+            android:layout_width="@dimen/icon_medium_size"
+            android:layout_height="@dimen/icon_medium_size"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:layout_marginRight="@dimen/margin_small"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:src="@drawable/ic_black_back" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="@dimen/margin_medium"
+        android:focusableInTouchMode="true"
+        android:background="@drawable/bg_border_search"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/margin_extra_small"
+        android:paddingRight="@dimen/margin_extra_small">
+
+        <EditText
+            android:id="@+id/etSearch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:background="@null"
+            android:hint="@string/hint_home_search"
+            android:lineSpacingExtra="@dimen/title_line_spacing_medium_size"
+            android:padding="@dimen/margin_small"
+            android:textAppearance="@style/TextAppearance.CircularStd.Book"
+            android:textColorHint="@color/hint"
+            android:textSize="@dimen/text_medium_size" />
+
+        <ImageView
+            android:id="@+id/ivIconSearch"
+            android:layout_width="@dimen/icon_large_size"
+            android:layout_height="@dimen/icon_large_size"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/margin_small"
+            android:padding="@dimen/margin_small"
+            android:src="@drawable/ic_gray_search" />
+
+    </LinearLayout>
+
+</LinearLayout>

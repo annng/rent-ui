@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="context"
+            type="com.rent.app.ui.home.message.MessageActivity" />
+    </data>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/container_bg">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvMessage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/item_message_left"
+            android:layout_above="@+id/llFieldPesan"
+            android:layout_below="@+id/toolbar" />
+
+        <LinearLayout
+            android:id="@+id/llFieldPesan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white_dark"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/height_divider"
+                android:background="@color/divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white_dark"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_small">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/margin_extra_small"
+                    android:layout_marginRight="@dimen/margin_extra_small"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_border_search"
+                    android:focusableInTouchMode="true"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/margin_extra_small"
+                    android:paddingRight="@dimen/margin_extra_small">
+
+
+                    <EditText
+                        android:id="@+id/et_message"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:background="@null"
+                        android:hint="@string/hint_message_type"
+                        android:lineSpacingExtra="@dimen/title_line_spacing_medium_size"
+                        android:maxLines="1"
+                        android:padding="@dimen/margin_small"
+                        android:singleLine="true"
+                        android:textAppearance="@style/TextAppearance.CircularStd.Book"
+                        android:textColorHint="@color/hint"
+                        android:textSize="@dimen/text_medium_size" />
+
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btnSend"
+                    android:layout_width="@dimen/width_btn_send"
+                    android:layout_height="@dimen/height_btn_send"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/margin_extra_small"
+                    android:layout_marginRight="@dimen/margin_extra_small"
+                    android:background="@drawable/bg_btn_orange"
+                    android:lineSpacingExtra="@dimen/title_line_spacing_medium_size"
+                    android:text="@string/action_send"
+                    android:onClick="@{() -> context.submitMessage()}"
+                    android:textAllCaps="false"
+                    android:textAppearance="@style/TextAppearance.CircularStd.Book"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_medium_size" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+</layout>

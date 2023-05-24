@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_medium"
+        android:background="@drawable/bg_rounded"
+        android:minWidth="300dp">
+
+        <LinearLayout
+            android:id="@+id/llContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/margin_medium"
+            android:paddingRight="@dimen/margin_medium">
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingBottom="@dimen/margin_small"
+                android:paddingLeft="@dimen/margin_small"
+                android:paddingRight="@dimen/margin_small"
+                android:paddingTop="@dimen/margin_small"
+                android:gravity="center"
+                android:text="@string/label_rentang_harga"
+                android:textAppearance="@style/TextAppearance.CircularStd.Medium"
+                android:textColor="@color/text_regular"
+                android:textSize="@dimen/title_medium_size"
+                />
+
+            <com.crystal.crystalrangeseekbar.widgets.BubbleThumbRangeSeekbar
+                android:id="@+id/rangeSeekbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium"
+                app:bar_color="@color/colorPrimaryDark"
+                app:bar_highlight_color="@color/colorAccent"
+                android:layout_marginBottom="@dimen/margin_medium"
+                app:max_value="1000000"
+                app:steps="10000"
+                app:data_type="_long"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvMinRange"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:textAppearance="@style/TextAppearance.CircularStd.Medium"
+                    android:textColor="@color/text_regular"
+                    android:textSize="@dimen/text_small_size"
+                    />
+
+                <TextView
+                    android:id="@+id/tvMaxRange"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:textAppearance="@style/TextAppearance.CircularStd.Medium"
+                    android:textColor="@color/text_regular"
+                    android:textSize="@dimen/text_small_size"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llBtnBottom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/llContent"
+            android:paddingLeft="@dimen/margin_medium"
+            android:paddingRight="@dimen/margin_medium">
+
+
+            <Button
+                android:id="@+id/negative"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/btn_round_height_small"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/margin_small"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/margin_small"
+                android:background="@android:color/transparent"
+                android:text="@string/action_reset"
+                android:textAppearance="@style/TextAppearance.CircularStd.Medium"
+                android:textColor="@color/hint"
+                android:textSize="@dimen/text_medium_size"
+                />
+
+            <Button
+                android:id="@+id/positive"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/btn_round_height_small"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@android:color/transparent"
+                android:text="@string/action_submit"
+                android:textAppearance="@style/TextAppearance.CircularStd.Medium"
+                android:textColor="@color/green"
+                android:textSize="@dimen/text_medium_size"/>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

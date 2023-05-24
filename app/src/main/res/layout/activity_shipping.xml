@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="context"
+            type="com.rent.app.ui.shipping.ShippingActivity" />
+    </data>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/llSubTotal"
+        android:layout_below="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/margin_small">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_medium"
+                    android:text="@string/label_pengiriman_1"
+                    android:textAppearance="@style/TextAppearance.CircularStd.Book"
+                    android:textColor="@color/label_black"
+                    android:textSize="@dimen/text_medium_size" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spCity"
+                        style="@style/SpinnerOutlineLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+
+                    <ImageView
+                        android:layout_width="@dimen/icon_medium_size"
+                        android:layout_height="@dimen/icon_medium_size"
+                        android:layout_gravity="center_vertical|end"
+                        android:layout_marginRight="@dimen/margin_big"
+                        android:src="@drawable/ic_dropdown" />
+
+
+                    <TextView
+                        android:id="@+id/tvHintKota"
+                        style="@style/TextViewHintOutline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_hint_kota" />
+
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spDistrict"
+                        style="@style/SpinnerOutlineLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+
+                    <ImageView
+                        android:layout_width="@dimen/icon_medium_size"
+                        android:layout_height="@dimen/icon_medium_size"
+                        android:layout_gravity="center_vertical|end"
+                        android:layout_marginRight="@dimen/margin_big"
+                        android:src="@drawable/ic_dropdown" />
+
+
+                    <TextView
+                        android:id="@+id/tvHintKecamatan"
+                        style="@style/TextViewHintOutline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_hint_kecamatan" />
+
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/spSubDistrict"
+                        style="@style/SpinnerOutlineLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+
+                    <ImageView
+                        android:layout_width="@dimen/icon_medium_size"
+                        android:layout_height="@dimen/icon_medium_size"
+                        android:layout_gravity="center_vertical|end"
+                        android:layout_marginRight="@dimen/margin_big"
+                        android:src="@drawable/ic_dropdown" />
+
+
+                    <TextView
+                        android:id="@+id/tvHintKelurahan"
+                        style="@style/TextViewHintOutline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_hint_kelurahan" />
+
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etAddress"
+                        style="@style/TextInputLayoutOutline"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:paddingLeft="@dimen/margin_hint"
+                        android:paddingTop="@dimen/margin_small"
+                        android:minLines="4" />
+
+                    <TextView
+                        android:id="@+id/tvHintAddress"
+                        style="@style/TextViewHintOutline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_hint_alamat" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etKodePos"
+                        style="@style/TextInputLayoutOutline"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLength="5"
+                        android:maxLines="1"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvHintKodePos"
+                        style="@style/TextViewHintOutline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:text="@string/label_hint_kode_pos" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etNamaPemesan"
+                        style="@style/TextInputLayoutOutline"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        />
+
+                    <TextView
+                        android:id="@+id/tvHintNamaPemesan"
+                        style="@style/TextViewHintOutline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:text="@string/label_hint_nama_pemesan" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etNoPhone"
+                        style="@style/TextInputLayoutOutlinePhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/tvHintNoPhone"
+                        style="@style/TextViewHintOutline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_hint_no_ponsel" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/container_bg"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_divider"
+                    android:background="@color/divider" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_small"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:text="@string/label_pengiriman_2"
+                    android:textAppearance="@style/TextAppearance.CircularStd.Book"
+                    android:textColor="@color/label_black"
+                    android:textSize="@dimen/text_medium_size" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_medium"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_medium"
+                    android:text="@string/label_info_pembayaran"
+                    android:textAppearance="@style/TextAppearance.CircularStd.Book"
+                    android:textColor="@color/hint_label"
+                    android:textSize="@dimen/text_medium_size" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvBank"
+                    android:layout_width="match_parent"
+                    android:paddingStart="@dimen/margin_medium"
+                    android:paddingEnd="@dimen/margin_medium"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:id="@+id/llInfoBank"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_margin="@dimen/margin_medium"
+                    android:padding="@dimen/margin_small"
+                    android:background="@color/view_bg">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <ImageView
+                            android:id="@+id/ivImageBank"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginStart="16dp"
+                            android:src="@drawable/img_mandiri" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginRight="16dp"
+                            android:layout_weight="2"
+                            android:gravity="end|center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvBankName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="4dp"
+                                android:layout_marginTop="8dp"
+                                android:text="Bank Mandiri"
+                                android:textColor="@color/black_dark"
+                                android:textAppearance="@style/TextAppearance.CircularStd.Medium"
+                                android:textSize="@dimen/text_medium_size" />
+
+                            <TextView
+                                android:id="@+id/tvBankAccountNumber"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textAppearance="@style/TextAppearance.CircularStd.Book"
+                                android:textSize="@dimen/text_medium_size"
+                                android:text="adasdasdasd"
+                                android:textColor="@color/black" />
+
+                            <TextView
+                                android:id="@+id/tvCopyRekening"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingTop="@dimen/margin_extra_small"
+                                android:layout_marginBottom="@dimen/margin_small"
+                                android:background="@android:color/transparent"
+                                android:textAppearance="@style/TextAppearance.CircularStd.Book"
+                                android:textSize="@dimen/text_medium_size"
+                                android:clickable="true"
+                                android:textAllCaps="true"
+                                android:text="@string/action_copy"
+                                android:textColor="@color/orange" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_divider"
+                    android:background="@color/divider" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_medium"
+                    android:text="@string/label_info_pertanyaan_promo"
+                    android:textAppearance="@style/TextAppearance.CircularStd.Book"
+                    android:textColor="@color/label_black"
+                    android:textSize="@dimen/text_medium_size" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/etPromo"
+                        style="@style/TextInputLayoutOutline"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:paddingEnd="@dimen/margin_right_kode_promo"
+                        android:singleLine="true" />
+
+                    <TextView
+                        android:id="@+id/tvHintPromo"
+                        style="@style/TextViewHintOutline"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_hint_kode_promo" />
+
+                    <Button
+                        android:id="@+id/btnCheckPromo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/btn_sewa_height"
+                        android:layout_gravity="center_vertical|end"
+                        android:layout_marginRight="@dimen/margin_big"
+                        android:background="@color/btn_blue"
+                        android:gravity="center"
+                        android:lineSpacingExtra="@dimen/title_line_spacing_medium_size"
+                        android:text="@string/action_check"
+                        android:textAllCaps="false"
+                        android:textAppearance="@style/TextAppearance.CircularStd.Book"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_medium_size" />
+
+
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/tvValidasiPromo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_medium"
+                    android:layout_marginStart="@dimen/margin_medium"
+                    android:visibility="invisible"
+                    android:text="@string/label_info_kode_promo_valid"
+                    android:textAppearance="@style/TextAppearance.CircularStd.Book"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/text_small_size" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_divider"
+                    android:background="@color/divider" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/llSubTotal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/container_bg"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_divider"
+            android:background="@color/divider" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvSubTotalItem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:lineSpacingExtra="@dimen/title_line_spacing_medium_size"
+                    android:text="@string/label_subtotal_item"
+                    android:textAppearance="@style/TextAppearance.CircularStd.Book"
+                    android:textColor="@color/label"
+                    android:textSize="@dimen/text_small_size" />
+
+                <TextView
+                    android:id="@+id/tvSubTotalPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_extra_small"
+                    android:lineSpacingExtra="@dimen/title_line_spacing_medium_size"
+                    android:text="@string/label_subtotal_item"
+                    android:textAppearance="@style/TextAppearance.CircularStd.Medium"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/title_medium_size" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_medium"
+                    android:layout_marginLeft="@dimen/margin_medium"
+                    android:layout_marginRight="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_extra_small"
+                    android:lineSpacingExtra="@dimen/title_line_spacing_medium_size"
+                    android:text="@string/label_belum_termasuk_biaya_pengiriman"
+                    android:textAppearance="@style/TextAppearance.CircularStd.Book"
+                    android:textColor="@color/label"
+                    android:textSize="@dimen/text_small_size" />
+
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/btnAjukan"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/button_next_height"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:background="@color/btn_orange"
+                android:lineSpacingExtra="@dimen/title_line_spacing_medium_size"
+                android:onClick="@{() -> context.gotoPayment()}"
+                android:text="@string/action_ajukan"
+                android:textAllCaps="false"
+                android:textAppearance="@style/TextAppearance.CircularStd.Book"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_medium_size" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
+</layout>

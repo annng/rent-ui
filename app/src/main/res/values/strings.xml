@@ -1,0 +1,193 @@
+<resources>
+    <string name="app_name">Rent</string>
+
+    //ACTIVITY TITLE
+    <string name="toolbar_notifikasi">Notification</string>
+    <string name="toolbar_perpesanan">Message</string>
+    <string name="toolbar_pengiriman">Shipping</string>
+    <string name="toolbar_item_favorit">Favorite Item</string>
+    <string name="toolbar_edit_profil">Edit Profile</string>
+    <string name="toolbar_review">Review</string>
+    <string name="toolbar_product">Product</string>
+
+    //DIALOG CALENDAR
+
+    //HINT
+    <string name="hint_home_search">Search goods and services...</string>
+    <string name="hint_search">Search</string>
+    <string name="hint_message_type">Type here...</string>
+
+
+    //NAV
+    <string name="nav_beranda">Home</string>
+    <string name="nav_buku_sewa">Order</string>
+    <string name="nav_troli">Cart</string>
+    <string name="nav_akun">Account</string>
+
+    //SEWA BUKU
+    <string name="tab_title_pengiriman">Shipping</string>
+
+    <string name="tab_title_status">Status</string>
+    <string name="tab_title_rincian">Detail</string>
+
+
+    //MENU CATEGORY
+
+    //HOME
+    <string name="title_product_pilihan">Featured Product</string>
+    <string name="subtitle_product_pilihan">The products what we recommend</string>
+    <string name="title_product_promo">Sale</string>
+    <string name="subtitle_product_promo">Enjoy discount for the following product</string>
+    <string name="title_product_populer">Popular produk</string>
+    <string name="subtitle_product_populer">Most frequently rented products</string>
+
+
+    //LABEL DIALOG
+    <string name="label_dialog_loading">Please wait...</string>
+    <string name="label_dialog_testimoni">Give your feedback</string>
+    <string name="label_rentang_harga">Range price</string>
+
+
+    <string name="label_perpesanan">Message</string>
+    <string name="label_notifikasi">Notification</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+
+    //PRODUCT
+    <string name="label_result_search_value">Result for `%1$s` found %2$d item(s)</string>
+    <string name="label_hint_lokasi">Location</string>
+    <string name="label_hint_rentang_harga">Range Price</string>
+    <string name="label_hint_urutkan_berdasarkan">Sort by</string>
+    <string name="label_rentang_harga_value">%1$s - %2$s</string>
+    <string name="label_harga_hari_value">Rp %1$s\/day</string>
+
+    //PRODUCT DETAIL
+    <string name="label_area_didukung">DISCOVERED AREA</string>
+    <string name="label_qty">Qty</string>
+    <string name="label_stok_tersedia">Available Stock</string>
+    <string name="label_produk_terkait">Related Products</string>
+    <string name="label_tabs_deskripsi">Description</string>
+    <string name="label_tabs_spesifikasi">Spesification</string>
+    <string name="label_info_gratis_ongkir">Enjoy free shipping for the orders above of 200 USD</string>
+
+    <string name="action_sewa">Rent</string>
+    <string name="action_send">Send</string>
+    <string name="action_next">Next</string>
+    <string name="action_login">Login</string>
+    <string name="action_bayar">Pay</string>
+    <string name="action_expired">Expired</string>
+    <string name="action_edit_profile">Edit Profile</string>
+    <string name="action_check">Check</string>
+    <string name="action_ajukan">Apply</string>
+    <string name="action_simpan_perubahan">Save Change</string>
+    <string name="action_register">Register</string>
+    <string name="action_reset">Reset</string>
+    <string name="action_submit">Submit</string>
+    <string name="action_sortir">Sortir</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_yakin">Sure</string>
+    <string name="action_copy">Copy</string>
+    <string name="action_ok">Oke</string>
+    <string name="action_filter">Filter</string>
+    <string name="action_kirim_testimoni">Send Testimoni</string>
+    <string name="action_kirim">Send</string>
+    <string name="action_lihat_semua_ulasan">See all review >></string>
+    <string name="action_see_other_product">See Other Product</string>
+
+    //NOTIFIKASI
+
+    //PESAN
+
+    //BUKU SEWA
+    <string name="label_tanggal_invoice">Invoice Date</string>
+    <string name="label_tanggal_peminjaman">Renting Date</string>
+    <string name="label_biaya_sewa">Rental Price</string>
+    <string name="label_biaya_pengiriman">Shipping Cost</string>
+    <string name="label_diskon_promo">Discount/Promo</string>
+    <string name="label_grand_total">Grand Total</string>
+    <string name="label_subTotal">Subtotal</string>
+    <string name="label_total">Total</string>
+    <string name="label_sewa_biaya_pengiriman">Rental Cost + Shipping</string>
+    <string name="label_sewa_item_value">Rent (%1$d Item)</string>
+
+    //TROLI
+    <string name="label_pilih_semua">Select All (%1$d/%2$d)</string>
+    <string name="label_subtotal_item">SUBTOTAL (%1$d Item)</string>
+    <string name="label_belum_termasuk_biaya_pengiriman">Not including shipping costs</string>
+    <string name="label_periode">Periode</string>
+
+    //PENGIRIMAN
+    <string name="label_pengiriman_1">1. Where will your rental goods / services be sent? </string>
+    <string name="label_pengiriman_2">2. Payment method for rental of goods / rental of services</string>
+    <string name="label_info_pembayaran">Currently `Rent` only accepts bank transfer</string>
+    <string name="label_info_pertanyaan_promo">Want to use promo?</string>
+
+    //PEMBAYARAN
+
+    <string name="label_hint_alamat">Address</string>
+    <string name="label_hint_kota">City</string>
+    <string name="label_hint_kecamatan">District</string>
+    <string name="label_hint_kelurahan">Sub District</string>
+    <string name="label_hint_nama">Name</string>
+    <string name="label_hint_password_lama">Old Password</string>
+    <string name="label_hint_password_baru">New Password</string>
+    <string name="label_hint_password">Password</string>
+    <string name="label_hint_konfirmasi_password_baru">Confirm New Password</string>
+    <string name="label_hint_nama_pemesan">Order Name</string>
+    <string name="label_hint_kode_pos">Postal Code</string>
+    <string name="label_hint_email">Email</string>
+    <string name="label_hint_no_ponsel">Phone Number</string>
+    <string name="label_hint_tanggal_lahir">Birthdate</string>
+    <string name="label_hint_jenis_kelamin">Gender</string>
+    <string name="label_hint_kode_promo">Promo Code</string>
+    <string name="label_info_kode_promo_valid">Promo Code valid! Discount : %1$s</string>
+
+    //AKUN
+    <string name="label_alamat">Address</string>
+    <string name="label_nomor_ponsel">Phone Number</string>
+    <string name="label_jenis_kelamin">Gender</string>
+    <string name="label_tanggal_lahir">Birthdate</string>
+    <string name="label_gender_male">Male</string>
+    <string name="label_gender_female">Female</string>
+
+    <string name="label_info_edit_akun_1">1. Personal Information </string>
+
+    <string name="title_menu_item_favorit">Favorite Item</string>
+    <string name="title_menu_edit_password">Change Password</string>
+    <string name="title_menu_perpesanan">Message</string>
+    <string name="title_menu_faq">FAQ</string>
+    <string name="title_menu_syarat_ketentuan">Term and Condition</string>
+    <string name="title_menu_privacy_policy">Privacy Policy</string>
+    <string name="title_menu_tentang_kami">About us</string>
+    <string name="title_menu_beri_feedback">Give Feedback</string>
+    <string name="title_menu_logout">Logout</string>
+
+    //LOGIN
+    <string name="label_login">Login</string>
+    <string name="label_btn_lupa_sandi">Forgot password</string>
+    <string name="label_belum_punya_akun">No Account yet?</string>
+    <string name="label_daftar_disini">Register here</string>
+
+    //REGISTER
+    <string name="label_register">Register</string>
+    <string name="label_sudah_punya_akun">Have Account?</string>
+    <string name="label_masuk_disini">Login here</string>
+
+    //FORGOT
+
+
+    //ERROR TOAST
+    <string name="toast_error_favorite_login">Please Login first</string>
+    <string name="field_error_empty_field">Field is required</string>
+    <string name="toast_error_invalid_email">Email is invalid</string>
+    <string name="toast_error_password_doesnt_match">New password doesn\'t match</string>
+    <string name="toast_copied_text">Copying text</string>
+
+    //ALERT DIALOG
+
+    //ERROR DIALOG
+    <string name="error_title_permission_storage">Permission access camera and storage.</string>
+    <string name="error_subtitle_permission_storage">The apps Need your permission for accessing camera dan storage.</string>
+
+
+</resources>

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<data>
+    <variable
+        name="status"
+        type="com.rent.app.data.order.OrderStatus" />
+    <variable
+        name="notificationDate"
+        type="java.lang.String"/>
+</data>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        
+        <ImageView
+            android:id="@+id/ivNewestIndicator"
+            android:layout_width="@dimen/icon_small_size"
+            android:layout_height="@dimen/icon_small_size"
+            android:layout_marginRight="@dimen/margin_small"
+            android:visibility="invisible"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_arrow"/>
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:background="@drawable/bg_btn_rounded"
+            android:textColor="@color/white"
+            android:lineSpacingExtra="@dimen/title_line_spacing_medium_size"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.CircularStd.Medium"
+            android:text="@{status.statusName}"
+            android:textSize="@dimen/text_small_size"
+            android:paddingTop="@dimen/margin_extra_small"
+            android:paddingBottom="@dimen/margin_extra_small"
+            android:paddingLeft="@dimen/margin_small"
+            android:paddingRight="@dimen/margin_small"
+            android:backgroundTint="@color/green"
+            />
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="end|center_vertical"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:lineSpacingExtra="@dimen/title_line_spacing_medium_size"
+            android:text="@{notificationDate}"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_gravity="center_vertical"
+            android:textAppearance="@style/TextAppearance.CircularStd.Book"
+            android:textColor="@color/label_black"
+            android:textSize="@dimen/text_medium_size" />
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/margin_big"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:background="@color/divider"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingEnd="@dimen/margin_medium"
+            android:paddingStart="@dimen/margin_medium"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginBottom="@dimen/margin_small"
+                android:lineSpacingExtra="@dimen/title_line_spacing_medium_size"
+                android:text="@{status.information}"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_gravity="center_vertical"
+                android:textAppearance="@style/TextAppearance.CircularStd.Book"
+                android:textColor="@color/label_black"
+                android:textSize="@dimen/text_medium_size" />
+
+            <Button
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_next_height"
+                android:text="@string/action_bayar"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:layout_marginEnd="@dimen/margin_medium"
+                android:layout_marginBottom="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_small"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:background="@color/orange_dark"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
+</layout>

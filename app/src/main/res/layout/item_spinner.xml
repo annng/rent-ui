@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TextView android:id="@android:id/text1"
+    style="?android:attr/spinnerItemStyle"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:singleLine="true"
+    android:maxLines="1"
+    android:textSize="@dimen/text_big_size"
+    android:paddingTop="@dimen/margin_medium"
+    android:paddingBottom="@dimen/margin_medium"
+    android:textColor="@color/black"
+    android:textAppearance="@style/TextAppearance.CircularStd.Book"
+    xmlns:android="http://schemas.android.com/apk/res/android" />

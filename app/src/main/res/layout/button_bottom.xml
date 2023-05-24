@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/view_bg"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_divider"
+            android:background="@color/divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/llBtnFilter"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?selectableItemBackground"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_medium">
+
+                <ImageView
+                    android:layout_width="@dimen/icon_medium_size"
+                    android:layout_height="@dimen/icon_medium_size"
+                    android:src="@drawable/ic_filter" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_medium"
+                    android:text="@string/action_filter"
+                    android:textAppearance="@style/TextAppearance.CircularStd.Medium"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_big_size" />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/height_divider"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin_small"
+                android:background="@color/divider" />
+
+            <LinearLayout
+                android:id="@+id/llBtnSortir"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="?selectableItemBackground"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_medium">
+
+                <ImageView
+                    android:layout_width="@dimen/icon_medium_size"
+                    android:layout_height="@dimen/icon_medium_size"
+                    android:src="@drawable/ic_sortir" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_medium"
+                    android:text="@string/action_sortir"
+                    android:textAppearance="@style/TextAppearance.CircularStd.Medium"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_big_size" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:title="@string/nav_beranda"
+        android:icon="@drawable/ic_orange_home"
+        />
+    <item
+        android:id="@+id/buku_sewa"
+        android:icon="@drawable/ic_orange_book"
+        android:title="@string/nav_buku_sewa"
+        />
+
+    <item
+        android:id="@+id/troli"
+        android:icon="@drawable/ic_cart_24"
+        android:title="@string/nav_troli"
+        />
+
+    <item
+        android:id="@+id/akun"
+        android:icon="@drawable/ic_orange_account"
+        android:title="@string/nav_akun"
+        />
+
+</menu>

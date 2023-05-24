@@ -1,0 +1,353 @@
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+<data>
+    <variable
+        name="account"
+        type="com.rent.app.data.Account" />
+    <variable
+        name="fragment"
+        type="com.rent.app.ui.main.child.account.AccountFragment" />
+</data>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/container_bg"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_divider"
+                        android:background="@color/divider" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+
+                        <ImageView
+                            android:id="@+id/ivPhotoProfile"
+                            android:layout_width="@dimen/thumbnail_photo_profile_small"
+                            app:loadUrlCircle="@{account.photos}"
+                            android:layout_height="@dimen/thumbnail_photo_profile_small"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/margin_medium"
+                            android:scaleType="centerCrop" />
+
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tvUserName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/margin_medium"
+                                android:layout_marginTop="@dimen/margin_medium"
+                                android:layout_marginRight="@dimen/margin_small"
+                                android:lineSpacingExtra="@dimen/title_line_spacing_medium_size"
+                                android:text="@{account.name}"
+                                android:textAppearance="@style/TextAppearance.CircularStd.Medium"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/title_medium_size" />
+
+
+                            <TextView
+                                android:id="@+id/tvUserEmail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/margin_medium"
+                                android:layout_marginRight="@dimen/margin_small"
+                                android:lineSpacingExtra="@dimen/title_line_spacing_medium_size"
+                                android:text="@{account.email}"
+                                android:textAppearance="@style/TextAppearance.CircularStd.Book"
+                                android:textColor="@color/label"
+                                android:textSize="@dimen/text_medium_size" />
+
+                            <Button
+                                android:id="@+id/btnEdit"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/button_height_edit"
+                                android:layout_marginLeft="@dimen/margin_medium"
+                                android:layout_marginTop="@dimen/margin_small"
+                                android:onClick="@{() -> fragment.gotoEditProfile()}"
+                                android:layout_marginBottom="@dimen/margin_medium"
+                                android:background="@drawable/bg_btn_orange"
+                                android:lineSpacingExtra="@dimen/title_line_spacing_medium_size"
+                                android:text="@string/action_edit_profile"
+                                android:textAllCaps="false"
+                                android:textAppearance="@style/TextAppearance.CircularStd.Book"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_medium_size" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/height_divider"
+                        android:background="@color/divider" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin_medium">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="@dimen/title_line_spacing_medium_size"
+                        android:text="@string/label_nomor_ponsel"
+                        android:textAllCaps="true"
+                        android:textAppearance="@style/TextAppearance.CircularStd.Medium"
+                        android:textColor="@color/label"
+                        android:textSize="@dimen/text_small_size" />
+
+                    <TextView
+                        android:id="@+id/tvUserPhone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:lineSpacingExtra="@dimen/title_line_spacing_medium_size"
+                        android:text="@{account.phone}"
+                        android:textAppearance="@style/TextAppearance.CircularStd.Book"
+                        android:textColor="@color/label_black"
+                        android:textSize="@dimen/text_medium_size" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_divider"
+                    android:background="@color/divider" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:padding="@dimen/margin_medium">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="@dimen/title_line_spacing_medium_size"
+                        android:text="@string/label_alamat"
+                        android:textAllCaps="true"
+                        android:textAppearance="@style/TextAppearance.CircularStd.Medium"
+                        android:textColor="@color/label"
+                        android:textSize="@dimen/text_small_size" />
+
+                    <TextView
+                        android:id="@+id/tvAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:lineSpacingExtra="@dimen/title_line_spacing_medium_size"
+                        android:text="@{account.address}"
+                        android:textAppearance="@style/TextAppearance.CircularStd.Book"
+                        android:textColor="@color/label_black"
+                        android:textSize="@dimen/text_medium_size" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_divider"
+                    android:background="@color/divider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="@dimen/margin_medium">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:lineSpacingExtra="@dimen/title_line_spacing_medium_size"
+                            android:text="@string/label_jenis_kelamin"
+                            android:textAllCaps="true"
+                            android:textAppearance="@style/TextAppearance.CircularStd.Medium"
+                            android:textColor="@color/label"
+                            android:textSize="@dimen/text_small_size" />
+
+                        <TextView
+                            android:id="@+id/tvGender"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:lineSpacingExtra="@dimen/title_line_spacing_medium_size"
+                            android:text="@{account.gender}"
+                            android:textAppearance="@style/TextAppearance.CircularStd.Book"
+                            android:textColor="@color/label_black"
+                            android:textSize="@dimen/text_medium_size" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="@dimen/margin_medium">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:lineSpacingExtra="@dimen/title_line_spacing_medium_size"
+                            android:text="@string/label_tanggal_lahir"
+                            android:textAllCaps="true"
+                            android:textAppearance="@style/TextAppearance.CircularStd.Medium"
+                            android:textColor="@color/label"
+                            android:textSize="@dimen/text_small_size" />
+
+                        <TextView
+                            android:id="@+id/tvBirthDay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:lineSpacingExtra="@dimen/title_line_spacing_medium_size"
+                            android:text="@{account.birthday}"
+                            android:textAppearance="@style/TextAppearance.CircularStd.Book"
+                            android:textColor="@color/label_black"
+                            android:textSize="@dimen/text_medium_size" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvMenuAkun"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/height_space_menu" />
+
+                <LinearLayout
+                    android:id="@+id/llLogout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/height_space_menu"
+                    android:layout_marginBottom="@dimen/margin_medium"
+                    android:background="@color/white"
+                    android:foreground="?selectableItemBackground"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/margin_medium">
+
+                        <ImageView
+                            android:layout_width="@dimen/icon_medium_size"
+                            android:layout_height="@dimen/icon_medium_size"
+                            android:src="@drawable/ic_logout" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/margin_medium"
+                            android:layout_marginRight="@dimen/margin_medium"
+                            android:layout_weight="1"
+                            android:lineSpacingExtra="@dimen/title_line_spacing_medium_size"
+                            android:text="@string/title_menu_logout"
+                            android:textAppearance="@style/TextAppearance.CircularStd.Book"
+                            android:textColor="@color/label_black"
+                            android:textSize="@dimen/text_medium_size" />
+
+
+                        <ImageView
+                            android:layout_width="@dimen/icon_medium_size"
+                            android:layout_height="@dimen/icon_medium_size"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/ic_chevron_right" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <FrameLayout
+            android:id="@+id/flPreview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/black_overlay" />
+
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/photoView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+            <ImageView
+                android:id="@+id/ivClosePreview"
+                android:layout_width="@dimen/icon_large_size"
+                android:layout_height="@dimen/icon_large_size"
+                android:layout_gravity="right"
+                android:layout_margin="@dimen/margin_medium"
+                android:src="@drawable/ic_close_white" />
+
+
+        </FrameLayout>
+
+    </RelativeLayout>
+</layout>

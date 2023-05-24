@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center_vertical"
+
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_medium"
+        android:background="@drawable/bg_rounded"
+        android:maxWidth="350dp"
+        android:minWidth="300dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/margin_medium">
+
+
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:paddingBottom="@dimen/margin_small"
+                android:paddingLeft="@dimen/margin_small"
+                android:paddingRight="@dimen/margin_small"
+                android:gravity="center"
+                android:paddingTop="@dimen/margin_small"
+                android:text="@string/label_dialog_loading"
+                android:textAppearance="@style/TextAppearance.CircularStd.Medium"
+                android:textColor="@color/text_regular"
+                android:textSize="@dimen/title_medium_size"
+                />
+
+            <com.wang.avi.AVLoadingIndicatorView
+                android:id="@+id/progressBar"
+                android:layout_width="@dimen/margin_big"
+                android:layout_height="@dimen/margin_big"
+                app:indicatorName="BallClipRotatePulseIndicator"
+                android:layout_gravity="center"
+                app:indicatorColor="@color/colorAccent"/>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/rlBottomSheetFilter"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/bottom_sheet_behavior"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="0dp">
+
+    <LinearLayout
+        android:id="@+id/llSlideFilter"
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:background="@color/view_bg"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textAppearance="@style/TextAppearance.CircularStd.Bold"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_big"
+            android:textSize="@dimen/title_medium_size"
+            android:text="@string/action_filter"
+            android:layout_marginRight="@dimen/margin_medium"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:textColor="@color/black"
+            />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spLokasi"
+                style="@style/SpinnerOutlineLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <ImageView
+                android:layout_width="@dimen/icon_medium_size"
+                android:layout_height="@dimen/icon_medium_size"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginRight="@dimen/margin_big"
+                android:src="@drawable/ic_dropdown" />
+
+
+            <TextView
+                style="@style/TextViewHintOutline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_hint_lokasi" />
+
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/tvRentangHarga"
+                style="@style/TextViewLayoutOutline"
+                android:layout_width="match_parent"
+                android:clickable="true"
+                android:longClickable="false"
+                android:layout_height="wrap_content"
+                android:focusable="true" />
+
+
+
+            <TextView
+                style="@style/TextViewHintOutline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/label_hint_rentang_harga" />
+
+
+        </FrameLayout>
+
+        <Button
+            android:id="@+id/btnSubmitFilter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/orange"
+            android:text="@string/action_kirim"
+            android:textColor="@color/white"
+            android:layout_margin="@dimen/margin_medium"
+            android:textSize="@dimen/text_medium_size"
+            android:textAppearance="@style/TextAppearance.CircularStd.Medium"
+            android:textAllCaps="false"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
